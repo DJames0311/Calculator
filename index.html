@@ -7,30 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="display">0</div>
-    <div class="button_layout">
-            <button class="number_buttons">C</button>
-            <button class="number_buttons">+/-</button>
-            <button class="number_buttons">%</button>
-            <button class="operation_buttons">&#247;</button>
-            <button class="more_buttons">7</button>
-            <button class="more_buttons">8</button>
-            <button class="more_buttons">9</button>
-            <button class="operation_buttons">x</button>
-            <button class="more_buttons">4</button>
-            <button class="more_buttons">5</button>
-            <button class="more_buttons">6</button>
-            <button class="operation_buttons">-</button>
-            <button class="more_buttons">1</button>
-            <button class="more_buttons">2</button>
-            <button class="more_buttons">3</button>
-            <button class="operation_buttons">+</button>
-            <button class="more_buttons">0</button>
-            <button class="more_buttons">.</button>
-            <button class="more_buttons">=</button>
-            <button class="operation_buttons">&Pi;</button>
-
+    <div id="calculator">
+    <input class="display" id="display" readonly>
+        <div class="button_layout">
+            <button class="number_buttons" onclick="clearDisplay()">C</button>
+            <button class="number_buttons" onclick="plusNsub('+/-')">+/-</button>
+            <button class="number_buttons" onclick="appendToDisplay('%')">%</button>
+            <button class="operation_buttons" onclick="appendToDisplay('&#247;')">&#247;</button>
+            <button class="more_buttons" onclick="appendToDisplay('7')">7</button>
+            <button class="more_buttons" onclick="appendToDisplay('8')">8</button>
+            <button class="more_buttons" onclick="appendToDisplay('9')">9</button>
+            <button class="operation_buttons" onclick="appendToDisplay('*')">x</button>
+            <button class="more_buttons" onclick="appendToDisplay('4')">4</button>
+            <button class="more_buttons" onclick="appendToDisplay('5')">5</button>
+            <button class="more_buttons" onclick="appendToDisplay('6')">6</button>
+            <button class="operation_buttons" onclick="appendToDisplay('-')">-</button>
+            <button class="more_buttons" onclick="appendToDisplay('1')">1</button>
+            <button class="more_buttons" onclick="appendToDisplay('2')">2</button>
+            <button class="more_buttons" onclick="appendToDisplay('3')">3</button>
+            <button class="operation_buttons" onclick="appendToDisplay('+')">+</button>
+            <button class="more_buttons" onclick="appendToDisplay('0')">0</button>
+            <button class="more_buttons" onclick="appendToDisplay('.')">.</button>
+            <button class="more_buttons" onclick="pi('3.1415')">&Pi;</button>
+            <button class="operation_buttons" onclick="calculate()">=</button>
+        </div>
     </div>
-
+</div>
+<script src="Index.js"></script>
 </body>
 </html>
